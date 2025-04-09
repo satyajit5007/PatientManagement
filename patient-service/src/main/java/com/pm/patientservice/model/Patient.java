@@ -1,6 +1,10 @@
 package com.pm.patientservice.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import java.time.LocalDate;
@@ -29,8 +33,6 @@ public class Patient {
     @NotNull
     private LocalDate registeredDate;
 
-    //getter and setter added in it
-
     public UUID getId() {
         return id;
     }
@@ -39,48 +41,44 @@ public class Patient {
         this.id = id;
     }
 
-    public String getName() {
+    public @NotNull String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(@NotNull String name) {
         this.name = name;
     }
 
-    public String getEmail() {
+    public @NotNull @Email String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
+    public void setEmail(@NotNull @Email String email) {
         this.email = email;
     }
 
-    public String getAddress() {
+    public @NotNull String getAddress() {
         return address;
     }
 
-    public void setAddress(String address) {
+    public void setAddress(@NotNull String address) {
         this.address = address;
     }
 
-    public LocalDate getDateOfBirth() {
+    public @NotNull LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(LocalDate dateOfBirth) {
+    public void setDateOfBirth(@NotNull LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public LocalDate getRegisteredDate() {
+    public @NotNull LocalDate getRegisteredDate() {
         return registeredDate;
     }
 
-    public void setRegisteredDate(LocalDate registeredDate) {
+    public void setRegisteredDate(@NotNull LocalDate registeredDate) {
         this.registeredDate = registeredDate;
     }
-
-
-
-
 
 }

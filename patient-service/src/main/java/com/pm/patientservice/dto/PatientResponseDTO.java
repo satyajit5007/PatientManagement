@@ -1,8 +1,5 @@
 package com.pm.patientservice.dto;
 
-import com.pm.patientservice.repository.PatientRepository;
-import jakarta.validation.constraints.NotNull;
-
 public class PatientResponseDTO {
     private String id;
     private String name;
@@ -49,4 +46,6 @@ public class PatientResponseDTO {
     public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
+
+
 }
