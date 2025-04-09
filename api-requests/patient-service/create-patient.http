@@ -1,1 +1,13 @@
 POST http://localhost:4000/patients
+
+Content-Type : application/json
+
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "address": "123 Main St",
+  "dateOfBirth": "1990-05-12",
+  "registeredDate": "2025-04-09"
+}
+// post api testing for create a new patient input in it
+post can be using for the creating new patient type in it
