@@ -7,10 +7,8 @@ import com.pm.patientservice.exception.PatientNotFoundException;
 import com.pm.patientservice.mapper.PatientMapper;
 import com.pm.patientservice.model.Patient;
 import com.pm.patientservice.repository.PatientRepository;
-import org.springframework.jdbc.core.ParameterMapper;
 import org.springframework.stereotype.Service;
 
-import java.security.PublicKey;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
