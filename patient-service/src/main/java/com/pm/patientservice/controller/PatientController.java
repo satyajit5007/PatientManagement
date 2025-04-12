@@ -35,6 +35,7 @@ public class PatientController {
         return ResponseEntity.ok().body(patients);
     }
 
+    // add new patient
     @PostMapping
     @Operation(summary ="Create a new Patient")
     public ResponseEntity<PatientResponseDTO> createPatient(@Validated({Default.class}) @RequestBody PatientRequestDTO patientRequestDTO){
@@ -51,6 +52,7 @@ public class PatientController {
         return ResponseEntity.ok().body(patientResponseDTO);
     }
 
+    //delete the patient
     @DeleteMapping("/{id}")
     @Operation(summary = "Delete a Patient")
     public ResponseEntity<Void> deletePatient(@PathVariable UUID id){
